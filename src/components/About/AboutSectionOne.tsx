@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -8,6 +11,8 @@ const checkIcon = (
 );
 
 const AboutSectionOne = () => {
+  const { t } = useLanguage();
+
   const List = ({ text }: { text: string }) => (
     <p className="text-body-color mb-5 flex items-center text-lg font-medium">
       <span className="bg-primary/10 text-primary mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md">
@@ -24,26 +29,25 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="公司简介 Company Profile"
-                paragraph="南斗医药是专注于全球核素核药研发生产与临床供应链一体化服务的专业服务商，总部位于北京，在成都设立核素核药中心，具备甲级辐射安全许可证与多温区放射性仓储能力。"
+                title={t("公司简介", "Company Profile")}
+                paragraph={t(
+                  "南斗医药是专注于全球核素核药研发生产与临床供应链一体化服务的专业服务商，总部位于北京，在成都设立核素核药中心，具备甲级辐射安全许可证与多温区放射性仓储能力。",
+                  "Nandou Pharmaceutical is a professional service provider dedicated to integrated R&D, production and clinical supply chain services for global nuclides and radiopharmaceuticals. Headquartered in Beijing with a nuclide center in Chengdu, holding a Class A Radiation Safety License and multi-temperature radioactive storage capabilities."
+                )}
                 mb="44px"
               />
 
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
+              <div className="mb-12 max-w-[570px] lg:mb-0" data-wow-delay=".15s">
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="甲级辐射安全许可证" />
-                    <List text="GMP/GDP认证" />
-                    <List text="多温区放射性仓储" />
+                    <List text={t("甲级辐射安全许可证", "Class A Radiation Safety License")} />
+                    <List text={t("GMP/GDP认证", "GMP/GDP Certification")} />
+                    <List text={t("多温区放射性仓储", "Multi-Temperature Storage")} />
                   </div>
-
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="全球供应链网络" />
-                    <List text="零辐射安全事故" />
-                    <List text="一站式交付服务" />
+                    <List text={t("全球供应链网络", "Global Supply Chain Network")} />
+                    <List text={t("零辐射安全事故", "Zero Radiation Accidents")} />
+                    <List text={t("一站式交付服务", "One-Stop Delivery Service")} />
                   </div>
                 </div>
               </div>
@@ -53,13 +57,13 @@ const AboutSectionOne = () => {
               <div className="relative mx-auto aspect-25/24 max-w-[500px] lg:mr-0">
                 <Image
                   src="/images/about/about-image.svg"
-                  alt="南斗医药公司简介"
+                  alt={t("南斗医药公司简介", "Nandou Pharmaceutical")}
                   fill
                   className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
                 />
                 <Image
                   src="/images/about/about-image-dark.svg"
-                  alt="南斗医药公司简介"
+                  alt={t("南斗医药公司简介", "Nandou Pharmaceutical")}
                   fill
                   className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
                 />

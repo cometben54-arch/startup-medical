@@ -1,7 +1,12 @@
+"use client";
+
 import { Feature } from "@/types/feature";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, paragraph } = feature;
+  const { lang } = useLanguage();
+  const { icon, title, titleEn, paragraph, paragraphEn } = feature;
+
   return (
     <div className="w-full">
       <div className="wow fadeInUp" data-wow-delay=".15s">
@@ -9,10 +14,10 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
           {icon}
         </div>
         <h3 className="mb-5 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
-          {title}
+          {lang === "en" && titleEn ? titleEn : title}
         </h3>
         <p className="text-body-color pr-[10px] text-base leading-relaxed font-medium">
-          {paragraph}
+          {lang === "en" && paragraphEn ? paragraphEn : paragraph}
         </p>
       </div>
     </div>

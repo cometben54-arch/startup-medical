@@ -1,18 +1,25 @@
+"use client";
+
 import SectionTitle from "../Common/SectionTitle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const GlobalNetwork = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="全球网络 Global Network"
-          paragraph="覆盖中国全境、北美、欧盟、亚太30+国家及地区，为全球核医疗产业提供可靠的供应链支持。"
+          title={t("全球网络", "Global Network")}
+          paragraph={t(
+            "覆盖中国全境、北美、欧盟、亚太30+国家及地区，为全球核医疗产业提供可靠的供应链支持。",
+            "Covering whole China, North America, EU, and Asia-Pacific (30+ countries), providing reliable supply chain support for the global nuclear medicine industry."
+          )}
           center
           mb="80px"
         />
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {/* 国内 Depot */}
           <div className="rounded-xs bg-white p-8 shadow-two dark:bg-gray-dark dark:shadow-three">
             <div className="mb-5 flex h-[60px] w-[60px] items-center justify-center rounded-md bg-primary/10 text-primary">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
@@ -20,17 +27,16 @@ const GlobalNetwork = () => {
               </svg>
             </div>
             <h3 className="mb-3 text-xl font-bold text-black dark:text-white">
-              国内Depot Domestic Depots
+              {t("国内Depot", "Domestic Depots")}
             </h3>
             <p className="text-base text-body-color dark:text-body-color-dark">
-              北京、上海、广州、无锡 — 核素核药专属仓，甲级辐射安全认证。
-            </p>
-            <p className="mt-2 text-sm text-body-color/80 dark:text-body-color-dark/80">
-              Beijing, Shanghai, Guangzhou, Wuxi — Exclusive warehouses, Class A radiation safety certified.
+              {t(
+                "北京、上海、广州、无锡 — 核素核药专属仓，甲级辐射安全认证。",
+                "Beijing, Shanghai, Guangzhou, Wuxi — Exclusive warehouses for nuclides & radiopharmaceuticals, Class A radiation safety certified."
+              )}
             </p>
           </div>
 
-          {/* 海外网络 */}
           <div className="rounded-xs bg-white p-8 shadow-two dark:bg-gray-dark dark:shadow-three">
             <div className="mb-5 flex h-[60px] w-[60px] items-center justify-center rounded-md bg-primary/10 text-primary">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
@@ -38,17 +44,16 @@ const GlobalNetwork = () => {
               </svg>
             </div>
             <h3 className="mb-3 text-xl font-bold text-black dark:text-white">
-              海外网络 Overseas Network
+              {t("海外网络", "Overseas Network")}
             </h3>
             <p className="text-base text-body-color dark:text-body-color-dark">
-              美国、欧洲、日本核素采购与合作生产基地。
-            </p>
-            <p className="mt-2 text-sm text-body-color/80 dark:text-body-color-dark/80">
-              Nuclide procurement and cooperative production bases in the US, Europe and Japan.
+              {t(
+                "美国、欧洲、日本核素采购与合作生产基地。",
+                "Nuclide procurement and cooperative production bases in the United States, Europe and Japan."
+              )}
             </p>
           </div>
 
-          {/* 覆盖区域 */}
           <div className="rounded-xs bg-white p-8 shadow-two dark:bg-gray-dark dark:shadow-three">
             <div className="mb-5 flex h-[60px] w-[60px] items-center justify-center rounded-md bg-primary/10 text-primary">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
@@ -56,13 +61,13 @@ const GlobalNetwork = () => {
               </svg>
             </div>
             <h3 className="mb-3 text-xl font-bold text-black dark:text-white">
-              覆盖区域 Coverage
+              {t("覆盖区域", "Coverage")}
             </h3>
             <p className="text-base text-body-color dark:text-body-color-dark">
-              中国全境、北美、欧盟、亚太30+国家及地区。
-            </p>
-            <p className="mt-2 text-sm text-body-color/80 dark:text-body-color-dark/80">
-              Whole China, North America, EU, Asia-Pacific — more than 30 countries and regions.
+              {t(
+                "中国全境、北美、欧盟、亚太30+国家及地区。",
+                "Whole China, North America, European Union, Asia-Pacific — more than 30 countries and regions."
+              )}
             </p>
           </div>
         </div>
