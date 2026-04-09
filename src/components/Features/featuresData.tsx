@@ -10,8 +10,9 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "核素/核药全球采购与供应",
-    paragraph:
-      "反应堆核素（¹⁷⁷Lu、¹³¹I、⁸⁹Sr）规模化供应，加速器核素（⁶⁸Ga、¹⁸F、⁶⁴Cu、²²⁵Ac）精准采购，对接ITM Isotope、Thor Medical等海外供应商。Global Nuclide/Radiopharmaceutical Procurement & Supply.",
+    titleEn: "Global Nuclide/Radiopharmaceutical Procurement & Supply",
+    paragraph: "反应堆核素（¹⁷⁷Lu、¹³¹I、⁸⁹Sr）规模化供应，加速器核素（⁶⁸Ga、¹⁸F、⁶⁴Cu、²²⁵Ac）精准采购，对接ITM Isotope、Thor Medical等海外供应商。",
+    paragraphEn: "Large-scale supply of reactor nuclides (¹⁷⁷Lu, ¹³¹I, ⁸⁹Sr), precise procurement of accelerator nuclides (⁶⁸Ga, ¹⁸F, ⁶⁴Cu, ²²⁵Ac), cooperation with overseas suppliers such as ITM Isotope and Thor Medical.",
   },
   {
     id: 2,
@@ -22,8 +23,9 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "临床对照药供应",
-    paragraph:
-      "原研参比制剂、阳性对照、安慰剂采购，全球寻源，合规配送，为临床试验提供稳定供应保障。Procurement of reference listed drugs, positive controls and placebos.",
+    titleEn: "Clinical Reference Drug Supply",
+    paragraph: "原研参比制剂、阳性对照、安慰剂采购，全球寻源，合规配送，为临床试验提供稳定供应保障。",
+    paragraphEn: "Procurement of reference listed drugs, positive controls and placebos with global sourcing and compliant delivery for stable clinical trial supply.",
   },
   {
     id: 3,
@@ -34,8 +36,9 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "核素核药临床Depot管理",
-    paragraph:
-      "多温区放射性仓储（-196°C至常温全覆盖），高活度防护、辐射安全监控、批次精准追溯，核药短时效配送与合规销毁。Dedicated Depot for nuclides & radiopharmaceuticals.",
+    titleEn: "Clinical Depot Management for Nuclides & Radiopharmaceuticals",
+    paragraph: "多温区放射性仓储（-196°C至常温全覆盖），高活度防护、辐射安全监控、批次精准追溯，核药短时效配送与合规销毁。",
+    paragraphEn: "Multi-temperature radioactive storage (-196°C to room temperature), high-activity protection, radiation safety monitoring, precise batch traceability, short-time delivery and compliant destruction.",
   },
   {
     id: 4,
@@ -46,8 +49,9 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "核药冷链物流与跨境运输",
-    paragraph:
-      "全程高活度冷链，定制化辐射防护包装，温湿度/辐射双重监控。国际空运/陆运跨境通关，国内24-48小时极速配送。Cold-Chain Logistics & Cross-Border Transportation.",
+    titleEn: "Cold-Chain Logistics & Cross-Border Transportation",
+    paragraph: "全程高活度冷链，定制化辐射防护包装，温湿度/辐射双重监控。国际空运/陆运跨境通关，国内24-48小时极速配送。",
+    paragraphEn: "Full-process high-activity cold chain with customized radiation protection packaging and dual monitoring. International air/land transportation with cross-border customs clearance, domestic 24-48 hour express delivery.",
   },
 ];
 export default featuresData;

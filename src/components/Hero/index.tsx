@@ -1,6 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useAdminContent } from "@/components/Admin/AdminPanel";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  const admin = useAdminContent();
+
   return (
     <>
       <section
@@ -12,26 +19,29 @@ const Hero = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  南斗医药 — 全球核素核药研发生产与临床供应链一体化服务
+                  {t(
+                    admin.get("heroTitleZh", "南斗医药 — 全球核素核药研发生产与临床供应链一体化服务"),
+                    admin.get("heroTitleEn", "Nandou Pharmaceutical — Integrated R&D, Production & Clinical Supply Chain Services for Global Nuclides and Radiopharmaceuticals")
+                  )}
                 </h1>
-                <p className="mb-5 text-base leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  聚焦核素供应、核药采购、临床对照药采购、Depot全流程管理四大核心业务，覆盖药品从早期开发、临床供应到商业化配送的全生命周期。
-                </p>
-                <p className="mb-12 text-sm leading-relaxed! text-body-color/80 dark:text-body-color-dark/80 sm:text-base">
-                  Nandou Pharmaceutical — Integrated R&D, production and clinical supply chain services for global nuclides and radiopharmaceuticals.
+                <p className="mb-12 text-base leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                  {t(
+                    admin.get("heroDescZh", "聚焦核素供应、核药采购、临床对照药采购、Depot全流程管理四大核心业务，覆盖药品从早期开发、临床供应到商业化配送的全生命周期。"),
+                    admin.get("heroDescEn", "Focusing on four core businesses: nuclide supply, radiopharmaceutical procurement, clinical reference drug procurement, and full-process Depot management, covering the entire life cycle from early development and clinical supply to commercial distribution.")
+                  )}
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
                     href="/#features"
                     className="rounded-xs bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    核心服务 Core Services
+                    {t("核心服务", "Core Services")}
                   </Link>
                   <Link
                     href="/contact"
                     className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
-                    联系我们 Contact Us
+                    {t("联系我们", "Contact Us")}
                   </Link>
                 </div>
               </div>

@@ -3,6 +3,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import AdminPanel from "@/components/Admin/AdminPanel";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
 
@@ -28,6 +29,7 @@ export default function RootLayout({
             <Footer />
           </div>
           <ScrollToTop />
+          <AdminPanel />
         </Providers>
       </body>
     </html>

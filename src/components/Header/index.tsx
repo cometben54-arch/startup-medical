@@ -4,9 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
+import LanguageToggler from "./LanguageToggler";
 import menuData from "./menuData";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
+  const { lang, t } = useLanguage();
+
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -116,7 +120,7 @@ const Header = () => {
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                             }`}
                           >
-                            {menuItem.title}
+                            {lang === "en" && menuItem.titleEn ? menuItem.titleEn : menuItem.title}
                           </Link>
                         ) : (
                           <>
@@ -124,7 +128,7 @@ const Header = () => {
                               onClick={() => handleSubmenu(index)}
                               className="text-dark group-hover:text-primary flex cursor-pointer items-center justify-between py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
                             >
-                              {menuItem.title}
+                              {lang === "en" && menuItem.titleEn ? menuItem.titleEn : menuItem.title}
                               <span className="pl-3">
                                 <svg width="25" height="24" viewBox="0 0 25 24">
                                   <path
@@ -147,7 +151,7 @@ const Header = () => {
                                   key={index}
                                   className="text-dark hover:text-primary block rounded-sm py-2.5 text-sm lg:px-3 dark:text-white/70 dark:hover:text-white"
                                 >
-                                  {submenuItem.title}
+                                  {lang === "en" && submenuItem.titleEn ? submenuItem.titleEn : submenuItem.title}
                                 </Link>
                               ))}
                             </div>
@@ -158,13 +162,16 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
+              <div className="flex items-center justify-end gap-1 pr-16 lg:pr-0">
                 <Link
                   href="/contact"
                   className="ease-in-up shadow-btn hover:shadow-btn-hover bg-primary hover:bg-primary/90 hidden rounded-xs px-8 py-3 text-base font-medium text-white transition duration-300 md:block md:px-9 lg:px-6 xl:px-9"
                 >
-                  咨询合作
+                  {t("咨询合作", "Contact")}
                 </Link>
+                <div>
+                  <LanguageToggler />
+                </div>
                 <div>
                   <ThemeToggler />
                 </div>
