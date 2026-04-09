@@ -10,8 +10,8 @@ const Blog = () => {
     >
       <div className="container">
         <SectionTitle
-          title="Our Latest Blogs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="新闻中心 News Center"
+          paragraph="了解南斗医药最新动态、行业资讯与核药技术文章。Corporate news, industry information, and technical articles."
           center
         />
 
