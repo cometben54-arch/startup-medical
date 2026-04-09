@@ -5,17 +5,16 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Page for Startup Nextjs Template",
-  // other metadata
+  title: "新闻中心 | 南斗医药 Nandou Pharmaceutical",
+  description: "南斗医药企业动态、行业资讯、案例分享与技术文章。",
 };
 
 const Blog = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Blog Grid"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="新闻中心 News Center"
+        description="了解南斗医药最新企业动态、行业资讯、核药临床供应案例与技术文章。Corporate news, industry information, case sharing and technical articles."
       />
 
       <section className="pt-[120px] pb-[120px]">

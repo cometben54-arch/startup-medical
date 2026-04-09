@@ -14,12 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+    <html suppressHydrationWarning lang="zh-CN">
+      <head>
+        <title>南斗医药 | Nandou Pharmaceutical - 全球核素核药研发生产与临床供应链一体化服务</title>
+        <meta name="description" content="南斗医药是专注于全球核素核药研发生产与临床供应链一体化服务的专业服务商，聚焦核素供应、核药采购、临床对照药采购、Depot全流程管理四大核心业务。" />
+      </head>
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
